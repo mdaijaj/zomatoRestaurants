@@ -1,0 +1,63 @@
+
+body {
+   	background:url('https://s3.ap-south-1.amazonaws.com/mumbai.urbanpiper.com/media/gallery_images/2017/07/27/banner001_COMPRESSED.jpg');
+	background-position: top;
+	background-color:  #5e0808;
+	background-repeat:no-repeat;
+}
+
+.searchBox {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    background: #2f3640;
+    height: 30px;
+    border-radius: 40px;
+    padding: 20px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 250px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: yellow;
+  color : black;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 45px;
+    height: 35px;
+    border-radius: 50%;
+    /*background: #2f3640;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 18px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}

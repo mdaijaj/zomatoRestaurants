@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurants</title>
+    <link rel="icon" type="image/jpg" href="https://bl.thgim.com/migration_catalog/article18123895.ece/alternates/LANDSCAPE_435/zomato2">
+    <link rel="stylesheet" type="text/css" href="/restaurants.css">
+    <style>
+              
+body {
+    background-color: gray;
+}
+
+.header {
+    background-color: #cb202d;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.data {
+    margin-top: 120px;
+    width: 1100px;
+}
+
+.box {
+    background-color: white;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+img {
+    width: 300px;
+    height: 250px;
+}
+
+hr {
+    width: 700px;
+}
+
+.title h2 {
+    color: red;
+}
+
+.names {
+    margin-left: 50px;
+    float: left;
+}
+
+.key {
+    font-size: 20px;
+    padding-right: 20px;
+}
+    </style>
+</head>
+
+
+<body>
+    <div class="header">
+        <center>
+            <div class="center">
+                <h1>Zomato Get Easy Food </h1>
+            </div>
+        </center>
+    </div>
+    <center>
+        <div class="data">
+            <% for (var i of all_data) {%>
+                <div class="box">
+                    <div class="image">
+                        <% if (i.featured_image != '' ){ %>
+                            <img src= <%=i.featured_image %> >
+                        <% } else { %>
+                            <img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/happytrioexplains-gmail.com/Tandoori_Paneer_Samosa.jpg" alt="image"></img>
+                         <% } %>
+                    </div>
+                    <div class="title">
+                        <h2>
+                            <a style="text-decoration:none" href="<%= i.url%>"><%= i.name %></a>
+                        </h2>
+                        <div>
+                            <h3>
+                                <li><%= i.address %></li>
+                            </h3>
+                            <hr>
+                            <table class="names">
+                                <tr>
+                                    <td class="key">Average Cost For Two :</td>
+                                    <td>
+                                        <%= i.average_cost_for_two %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="key"> Price Range :</td>
+                                    <td>
+                                        <%= i.price_range %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="key"> Has Online Delivery :</td>
+                                    <td>
+                                        <%= i.has_online_delivery %>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="key"> Cuisines :</td>
+                                    <td>
+                                        <%= i.cuisines %>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </center>
+</body>
+</html>

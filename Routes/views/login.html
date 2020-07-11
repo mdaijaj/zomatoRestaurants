@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signup</title>
+        <meta charset="utf-8">
+        <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: url(https://www.xmple.com/wallpaper/gradient-linear-red-grey-1920x1080-c2-ff0000-778899-a-15-f-14.svg);
+            background-size: cover;
+            background-position: center;
+            font-family: sans-serif;
+            background-attachment: fixed;
+        }
+        .Loginbox img{
+            width: 175px;
+            margin-top: -15%;
+            margin-left: 33%;
+        }   
+        .Loginbox{
+            width: 480px;
+            height: 500px;
+            border-radius: 50px;
+            margin-left: 35%;
+            background:black;
+            color:#fff;
+            top: 20%;
+            position: absolute;
+            box-sizing: border-box;
+        }
+        .Loginbox input[type="submit"]:hover
+        {
+            cursor: pointer;
+            background-color: red;
+            color: green;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="Loginbox">
+            <img src="https://cdn.glitch.com/74174196-fbf8-4f3d-b51c-6334318ac153%2Favatar.png?v=1561368988007">
+            <div>
+                <h1 align="center">Login Here</h1>
+
+                <center><form action = "/user/login" method="POST">
+                    <p>Username</p><input type="text" name="email" placeholder="Enter Username" required="">
+                    <p>Password</p><input type="password" name="password" placeholder="Enter Password"required=""><br><br>
+                    <input type="submit" value="Submit">
+                    </form>
+
+                    <form action='/user/userSignUp' method="GET"><br>       <!-- write endpoint -->
+                        <input type="submit" value="Sign Up">
+                    </form>
+                </center>
+            </div
+>        </div>
+    </body>
+</html>

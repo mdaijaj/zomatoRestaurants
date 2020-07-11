@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <style>
+        body{
+            background:url(https://cms.qz.com/wp-content/uploads/2015/02/zomato.jpg?quality=75&strip=all&w=900&h=900&crop=1);
+            /*background-position: fixed;*/
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .bg{
+            height: 570px;
+            width: 550px;
+            margin: 10% 30% 0% 30%;
+            padding: 2px;
+        }
+        .bg h1{
+            padding: 25px;
+            text-align: center; 
+
+            color: blue;
+        }
+        input{
+            border-color: black;
+            font-size: 18px;
+        }
+        .hi{
+            background-color: #fc0345;
+            height: 450px;
+            width: 400px;   
+        }
+    </style>
+</head>
+    <body class="bg">
+        <center>
+        <div class="hi">
+            <h1>Registration Online</h1>
+            <form action='/user/signup' method="POST">
+                <input type="text" name = "name" placeholder="Name"><br/><br>
+                <input type="text" name = "email" placeholder="E-mail" required=""><br/><br>
+                <input type="password" name = "password" placeholder="Password"><br/><br>
+                <input type="password" name = "password_2" placeholder="Re-Enter Password"><br/><br>
+                <input type="submit" value ="Register">
+            </form>
+            <form action='/user/userLogin' method="GET"><br>
+                <input type="submit" value ="Login">
+            </form>
+        </div>
+    </center>
+    </body>
+</html>
