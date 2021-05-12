@@ -22,7 +22,7 @@
     "knex": "^0.19.0",
     "mysql": "^2.17.1",
     "node-geocoder": "^3.23.0",
-    "nodemailer": "^6.3.0",
+    "nodemailer": "^6.4.16",
     "promise": "*",
     "pug": "^2.0.4",
     "zomato": "^1.1.0",
